@@ -9,7 +9,7 @@ public class TestDAO extends SightingsDAO {
 	public static void main(String[] args) {
 		SightingsDAO dao = new SightingsDAO() ;
 		
-		List<Sighting> list = dao.getSightings() ;
+		List<Sighting> list = dao.getAvvistamentiDaAnno(2001);
 		
 		for(Sighting s: list)
 			System.out.println(s);

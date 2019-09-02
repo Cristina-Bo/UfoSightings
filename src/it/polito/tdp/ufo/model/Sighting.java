@@ -16,6 +16,7 @@ public class Sighting {
 	private LocalDate date_posted ;
 	private double latitude ;
 	private double longitude ;
+	private Stato stato;
 	
 	public Sighting(int id, LocalDateTime datetime, String city, String state, String country, String shape,
 			int duration, String duration_hm, String comments, LocalDate date_posted, double latitude,
@@ -33,6 +34,7 @@ public class Sighting {
 		this.date_posted = date_posted;
 		this.latitude = latitude;
 		this.longitude = longitude;
+		this.stato = new Stato(state);
 	}
 	
 	public int getId() {
@@ -108,6 +110,16 @@ public class Sighting {
 		this.longitude = longitude;
 	}
 	
+	
+	
+	public Stato getStato() {
+		return stato;
+	}
+
+	public void setStato(Stato stato) {
+		this.stato = stato;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -129,6 +141,7 @@ public class Sighting {
 			return false;
 		return true;
 	}
+	
 
 	@Override
 	public String toString() {
